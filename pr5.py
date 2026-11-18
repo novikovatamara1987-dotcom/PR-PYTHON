@@ -9,14 +9,13 @@ for number in range(1, 3):
 
     users.append([login, password, full_name, email])
 
-letter = input("\nВведите букву, с которой должен начинаться логин: ").strip()
+letter = input("\nВведите букву логина ").strip()
 
 if len(letter) != 1:
-    print("Нужно ввести ровно одну букву.")
+    print("Нужна одна.")
 else:
     search_letter = letter.casefold()
 
-    # Выводятся только фамилии подходящих пользователей.
     for user in users:
         login = user[0]
         full_name = user[2]
